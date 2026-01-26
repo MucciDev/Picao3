@@ -21,12 +21,8 @@ class Colors(Enum):
 class Position:
     x: int
     y: int
-    
-    def __add__(self, other):
-        return Position(self.x + other.x, self.y + other.y)
-    
-    def to_tuple(self):
-        return (self.x, self.y)
+    def __add__(self, other): return Position(self.x + other.x, self.y + other.y)
+    def to_tuple(self): return (self.x, self.y)
 
 class MenuParticle:
     def __init__(self, screen_width, screen_height):
